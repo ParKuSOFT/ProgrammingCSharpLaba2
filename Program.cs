@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ProgrammingCSharpLaba2
@@ -11,7 +12,14 @@ namespace ProgrammingCSharpLaba2
     {
         static async Task Main(string[] args)
         {
-            UsingListAndLinkedList();
+            GenerateClass gc = new GenerateClass();
+            int[] array = gc.GenerateIntArray();
+            int ch, nch = 0;
+            foreach (int i in array)
+            {
+                
+            }
+            //UsingListAndLinkedList();
             Console.WriteLine("Complite");
         }
 
@@ -20,7 +28,7 @@ namespace ProgrammingCSharpLaba2
             DateTime dtStart = DateTime.Now;
             List<int> list = new List<int>();
             LinkedList<int> linked = new LinkedList<int>();
-            GenerateListsClass glc = new GenerateListsClass();
+            GenerateClass glc = new GenerateClass();
             SortedListsClass slc = new SortedListsClass();
             list = glc.GenerateList();
             DateTime dtList = DateTime.Now;
